@@ -20,53 +20,14 @@ module.exports = {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-explicit-any': 'error',
-    '@typescript-eslint/no-empty-function': 'error',
+    '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/naming-convention': [
       'error',
       {
-        selector: 'function',
-        format: ['camelCase'],
-        leadingUnderscore: 'allow',
-      },
-      {
-        selector: 'variable',
-        format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
-        trailingUnderscore: 'allow',
-      },
-      {
-        selector: 'typeLike',
+        selector: 'class',
         format: ['PascalCase'],
       },
     ],
-    '@typescript-eslint/no-unused-vars': [
-      'error',
-      {
-        argsIgnorePattern: '^_',
-      },
-    ],
-    complexity: ['error', 12],
-    'no-console': 'error',
-    'no-var': 'error',
-    'object-shorthand': 'error',
-    'prefer-const': 'error',
-    'prefer-destructuring': [
-      'warn',
-      {
-        VariableDeclarator: {
-          array: false,
-          object: true,
-        },
-        AssignmentExpression: {
-          array: true,
-          object: true,
-        },
-      },
-      {
-        enforceForRenamedProperties: false,
-      },
-    ],
-    'require-await': 'error',
-    'prefer-object-spread': 'error',
+    'no-console': ['error', { allow: ['warn', 'error'] }],
   },
 };

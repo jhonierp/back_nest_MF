@@ -6,7 +6,7 @@ config();
 const configService = new ConfigService();
 
 export default new DataSource({
-  type: 'mariadb',
+  type: 'mysql',
   username: configService.get('DB_USER'),
   password: configService.get('DB_PASS'),
   database: configService.get('DB_NAME'),
